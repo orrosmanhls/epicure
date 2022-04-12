@@ -1,11 +1,31 @@
-<header class="banner">
-  <a class="brand" href="{{ home_url('/') }}">
-    {!! $siteName !!}
-  </a>
+<header class="header">
+  <div class="brand">
+    <a href="{{ home_url('/') }}">
+      <img class="brand-image" src="{{ asset('/images/logo.png')  }}" alt="logo">
+      EPICURE
+    </a>
+  </div>
 
-  @if (has_nav_menu('primary_navigation'))
-    <nav class="nav-primary" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
-      {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'echo' => false]) !!}
-    </nav>
-  @endif
+  <div class="pages-nav">
+    <?php
+        $args = array(
+            'theme_location'  =>  'pages',
+            'container'       => 'nav',
+            'container_class' => 'pages',
+            'container_id'    => 'pages',
+        );
+        wp_nav_menu($args);
+        ?>
+  </div>
+
+  <x-search-input>
+    @section('icon')
+    <x-button-icon source="{{ asset('../images/search-icon.svg') }}" />
+    @endsection
+  </x-search-input>
+
+  <div class="user">
+    <x-button-icon source="{{ asset('../images/user-icon.svg') }}" alt_text="user icon" />
+    <x-button-icon source="{{ asset('../images/bag-icon.svg') }}" alt_text="bag icon" />
+  </div>
 </header>
