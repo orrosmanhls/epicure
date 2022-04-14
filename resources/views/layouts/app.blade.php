@@ -2,3 +2,4 @@
 @include('sections.hero')
 @include('sections.restaurants')
 @include('sections.signature-dishes')
+@include('sections.icon-definitions')
