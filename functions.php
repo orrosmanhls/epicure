@@ -81,44 +81,32 @@ add_theme_support('sage');
 
 function epicure_restaurants_list($number_of_restaurants = -1)
 { ?>
-    <ul class="restaurants-list">
+    <?php
+    $args = array(
+        'post_type' =>  'epicure_restaurants',
+        'posts_per_page'   => $number_of_restaurants
+    );
 
-        <?php
-        $args = array(
-            'post_type' =>  'epicure_restaurants',
-            'posts_per_page'   => $number_of_restaurants
-        );
+    $restaurants_results = new WP_Query($args);
 
-        $restaurants = new WP_Query($args);
+    $restaurants = array();
+    while ($restaurants_results->have_posts()) :
+        $restaurants_results->the_post();
 
-        while ($restaurants->have_posts()) :
-            $restaurants->the_post();
-        ?>
-            <li class="restaurant-card">
-                <?php the_post_thumbnail('medium'); ?>
+        $restaurant = (object)[];
+        $restaurant->name = get_the_title();
+        $restaurant->image = get_the_post_thumbnail_url();
+        $restaurant->chef = get_field('chef_name');
 
-                <div class="restaurant-card-content">
-                    <h1>
-                        <?php the_title(); ?>
-                    </h1>
+        array_push($restaurants, $restaurant);
+    endwhile;
+    wp_reset_postdata();
 
-                    <?php
-                    // Custom field type (ACF) for restaurants
-                    $chef = get_field('chef_name');
-                    ?>
-                    <p><?php echo "{$chef}"; ?></p>
-
-                </div>
-
-
-            </li>
-
-        <?php endwhile;
-        wp_reset_postdata(); ?>
-
-    </ul>
+    return $restaurants;
+    ?>
 <?php
 }
+
 function epicure_dishes_list($number_of_dishes = -1)
 { ?>
     <ul class="dishes-list">
