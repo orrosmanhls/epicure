@@ -11,7 +11,7 @@
 |
 */
 
-if (! file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
+if (!file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
     wp_die(__('Error locating autoloader. Please run <code>composer install</code>.', 'sage'));
 }
 
@@ -56,7 +56,7 @@ try {
 
 collect(['setup', 'filters'])
     ->each(function ($file) {
-        if (! locate_template($file = "app/{$file}.php", true, true)) {
+        if (!locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
                 /* translators: %s is replaced with the relative file path */
                 sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file)
@@ -77,3 +77,45 @@ collect(['setup', 'filters'])
 */
 
 add_theme_support('sage');
+
+
+function epicure_restaurants_list($number_of_restaurants = -1)
+{ ?>
+    <ul class="restaurants-list">
+
+        <?php
+        $args = array(
+            'post_type' =>  'epicure_restaurants',
+            'posts_per_page'   => $number_of_restaurants
+        );
+
+        $restaurants = new WP_Query($args);
+
+        while ($restaurants->have_posts()) :
+            $restaurants->the_post();
+        ?>
+            <li class="restaurant-card">
+                <?php the_post_thumbnail('medium'); ?>
+
+                <div class="restaurant-card-content">
+                    <h1>
+                        <?php the_title(); ?>
+                    </h1>
+
+                    <?php
+                    // Custom field type (ACF) for restaurants
+                    $chef = get_field('chef_name');
+                    ?>
+                    <p><?php echo "{$chef}"; ?></p>
+
+                </div>
+
+
+            </li>
+
+        <?php endwhile;
+        wp_reset_postdata(); ?>
+
+    </ul>
+<?php
+}
