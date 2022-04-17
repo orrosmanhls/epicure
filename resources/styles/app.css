@@ -177,3 +177,72 @@ html {
   color: var(--black);
   text-decoration: none;
 }
+
+/* Dishes Section */
+
+.dishes {
+  margin-top: 10rem;
+}
+
+.dishes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.dish-card-content {
+  background-color: var(--beige);
+  text-align: center;
+  height: 30rem;
+  position: relative;
+}
+
+.dish-card h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  margin-top: 1rem;
+}
+
+.dish-card p {
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.all-dishes {
+  float: right;
+  margin-right: 3rem;
+  font-size: 1.5rem;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.dish-info-icon {
+  margin: 2rem 0;
+}
+
+/* price with lines */
+.price {
+  overflow: hidden;
+  text-align: center;
+  margin: 0 1rem;
+}
+.price > span {
+  position: relative;
+  display: inline-block;
+}
+.price > span:before,
+.price > span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-bottom: 1px solid var(--brown-grey);
+  width: 100vw;
+  margin: 0 20px;
+}
+.price > span:before {
+  right: 100%;
+}
+.price > span:after {
+  left: 100%;
+}
