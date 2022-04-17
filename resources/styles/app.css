@@ -335,7 +335,7 @@ html {
   margin-right: 1rem;
 }
 
-.download-button {
+.download-button a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -344,13 +344,15 @@ html {
   border-radius: 5px;
   padding: 0.3rem;
   justify-content: space-evenly;
+  text-decoration: none;
+  color: #000;
 }
 
-.download-button span {
+.download-button a span {
   margin: 0 0.5rem;
 }
 
-.download-button span div {
+.download-button a span div {
   font-weight: bolder;
   font-size: larger;
 }
