@@ -166,7 +166,7 @@ function epicure_dishes_list($number_of_dishes = -1)
                     <?php
                     }
                     ?>
-                    <h3 class="price"><span><?php echo "{$price} ₪"; ?></span></h3>
+                    <h3 class="price"><span><?php echo "₪{$price}"; ?></span></h3>
 
                 </div>
 
