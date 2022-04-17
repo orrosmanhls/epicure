@@ -295,3 +295,64 @@ html {
   text-align: justify;
   margin: 0 2rem;
 }
+
+/* ABOUT US Section */
+
+.about-us {
+  background-color: #fafafa;
+  padding: 1rem 6rem;
+}
+
+.about-us .container {
+  display: flex;
+  align-items: center;
+}
+
+.about-us .container .about-us-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5rem;
+}
+
+.about-us .container .about-us-brand {
+  margin: 0 5rem;
+}
+
+.about-us .container .about-us-brand a {
+  text-decoration: none;
+  color: black;
+}
+
+.about-us .container .about-us-brand img {
+  height: 6rem;
+}
+
+.about-us .buttons {
+  display: flex;
+}
+
+.about-us .buttons .download-button:first-child {
+  margin-right: 1rem;
+}
+
+.download-button a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0.3rem;
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: #000;
+}
+
+.download-button a span {
+  margin: 0 0.5rem;
+}
+
+.download-button a span div {
+  font-weight: bolder;
+  font-size: larger;
+}
