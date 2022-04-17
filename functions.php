@@ -179,3 +179,46 @@ function epicure_dishes_list($number_of_dishes = -1)
     </ul>
 <?php
 }
+
+function epicure_random_chef()
+{ ?>
+
+    <?php
+    $args = array(
+        'post_type' =>  'epicure_chefs',
+        'posts_per_page'   => 1,
+        'orderby' => 'rand'
+    );
+
+    $chef_query = new WP_Query($args);
+
+    // build chef object
+    while ($chef_query->have_posts()) :
+        $chef_query->the_post();
+
+        $chef = (object)[];
+        $chef->image = get_the_post_thumbnail_url();
+        $chef->name = get_field('name');
+        $chef->restaurants = get_field('restaurants');
+        $chef->info =  get_field('chef_info');
+
+    endwhile;
+    wp_reset_postdata();
+
+    // build restaurant object
+    $restaurants = array();
+    foreach ($chef->restaurants as $restaurant) :
+        $restaurant_obj = (object)[];
+        $restaurant_obj->name = $restaurant->post_title;
+        $restaurant_obj->image = wp_get_attachment_image_src(get_post_thumbnail_id($restaurant->ID))[0];
+        array_push($restaurants, $restaurant_obj);
+    endforeach;
+
+    $chef->restaurants = $restaurants;
+
+    return $chef;
+
+    ?>
+
+<?php
+}
