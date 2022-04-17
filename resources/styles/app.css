@@ -150,16 +150,23 @@ html {
   margin-top: 10rem;
 }
 
+.restaurants .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
 .restaurants-list {
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .restaurant-card {
   background-color: var(--beige);
   text-align: center;
+  margin: 0.4rem;
 }
 
 .restaurant-card h1 {
