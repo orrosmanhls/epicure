@@ -1,3 +1,83 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../fonts/HelveticaNeue/HelveticaNeue.ttf");
+}
+html {
+  font-size: 16px;
+}
+/* Header */
+
+.header {
+  font-family: "HelveticaNeue";
+  font-weight: 100;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 400;
+  display: flex;
+  margin: 0.9rem 0;
+  margin-left: 9rem;
+}
+
+.brand a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Header nav */
+
+.pages-nav ul {
+  list-style: none;
+}
+
+.pages-nav ul li {
+  float: right;
+  margin-left: 2rem;
+}
+
+.page_item {
+  font-size: 1.125rem;
+  display: inline-block;
+}
+
+.page_item a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Header search */
+
+.header .search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 3rem;
+}
+
+.header .search-input {
+  border: 1.5px solid #b3b1b1;
+  border-radius: 4px;
+  width: 15rem;
+  padding: 0.5rem 0.5rem;
+  padding-right: 5rem;
+}
+
+.header .search img {
+  position: absolute;
+  right: 10px;
+}
+
+/* Header user section */
+.header .user {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header .user img {
+  margin: 0 2rem;
+}
