@@ -5,3 +5,4 @@
 @include('sections.icon-definitions')
 @include('sections.week-chef')
 @include('sections.about-us')
+@include('sections.footer')
