@@ -3,3 +3,4 @@
 @include('sections.restaurants')
 @include('sections.signature-dishes')
 @include('sections.icon-definitions')
+@include('sections.week-chef')

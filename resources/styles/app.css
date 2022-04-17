@@ -268,3 +268,30 @@ html {
 .icon-definitions ul li {
   margin: 0 2rem;
 }
+
+/* Chef of the week  section*/
+.chef-of-the-week .chef-image {
+  position: relative;
+}
+
+.chef-of-the-week .chef-name {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  margin-bottom: 0;
+}
+
+.chef-info {
+  display: flex;
+  justify-content: center;
+}
+
+.chef-info p {
+  font-size: larger;
+  width: 40%;
+  text-align: justify;
+  margin: 0 2rem;
+}

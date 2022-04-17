@@ -81,44 +81,32 @@ add_theme_support('sage');
 
 function epicure_restaurants_list($number_of_restaurants = -1)
 { ?>
-    <ul class="restaurants-list">
+    <?php
+    $args = array(
+        'post_type' =>  'epicure_restaurants',
+        'posts_per_page'   => $number_of_restaurants
+    );
 
-        <?php
-        $args = array(
-            'post_type' =>  'epicure_restaurants',
-            'posts_per_page'   => $number_of_restaurants
-        );
+    $restaurants_results = new WP_Query($args);
 
-        $restaurants = new WP_Query($args);
+    $restaurants = array();
+    while ($restaurants_results->have_posts()) :
+        $restaurants_results->the_post();
 
-        while ($restaurants->have_posts()) :
-            $restaurants->the_post();
-        ?>
-            <li class="restaurant-card">
-                <?php the_post_thumbnail('medium'); ?>
+        $restaurant = (object)[];
+        $restaurant->name = get_the_title();
+        $restaurant->image = get_the_post_thumbnail_url();
+        $restaurant->chef = get_field('chef_name');
 
-                <div class="restaurant-card-content">
-                    <h1>
-                        <?php the_title(); ?>
-                    </h1>
+        array_push($restaurants, $restaurant);
+    endwhile;
+    wp_reset_postdata();
 
-                    <?php
-                    // Custom field type (ACF) for restaurants
-                    $chef = get_field('chef_name');
-                    ?>
-                    <p><?php echo "{$chef}"; ?></p>
-
-                </div>
-
-
-            </li>
-
-        <?php endwhile;
-        wp_reset_postdata(); ?>
-
-    </ul>
+    return $restaurants;
+    ?>
 <?php
 }
+
 function epicure_dishes_list($number_of_dishes = -1)
 { ?>
     <ul class="dishes-list">
@@ -189,5 +177,48 @@ function epicure_dishes_list($number_of_dishes = -1)
         wp_reset_postdata(); ?>
 
     </ul>
+<?php
+}
+
+function epicure_random_chef()
+{ ?>
+
+    <?php
+    $args = array(
+        'post_type' =>  'epicure_chefs',
+        'posts_per_page'   => 1,
+        'orderby' => 'rand'
+    );
+
+    $chef_query = new WP_Query($args);
+
+    // build chef object
+    while ($chef_query->have_posts()) :
+        $chef_query->the_post();
+
+        $chef = (object)[];
+        $chef->image = get_the_post_thumbnail_url();
+        $chef->name = get_field('name');
+        $chef->restaurants = get_field('restaurants');
+        $chef->info =  get_field('chef_info');
+
+    endwhile;
+    wp_reset_postdata();
+
+    // build restaurant object
+    $restaurants = array();
+    foreach ($chef->restaurants as $restaurant) :
+        $restaurant_obj = (object)[];
+        $restaurant_obj->name = $restaurant->post_title;
+        $restaurant_obj->image = wp_get_attachment_image_src(get_post_thumbnail_id($restaurant->ID))[0];
+        array_push($restaurants, $restaurant_obj);
+    endforeach;
+
+    $chef->restaurants = $restaurants;
+
+    return $chef;
+
+    ?>
+
 <?php
 }
