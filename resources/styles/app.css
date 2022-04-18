@@ -35,6 +35,17 @@ html {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0.1rem;
+  }
+}
+
 .brand {
   font-size: 1.6rem;
   font-weight: 400;
@@ -43,15 +54,40 @@ html {
   margin-left: 9rem;
 }
 
+@media (max-width: 768px) {
+  .brand {
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
 .brand a {
   text-decoration: none;
   color: #000;
 }
 
 /* Header nav */
+.pages-nav img {
+  display: none;
+}
 
+@media (max-width: 768px) {
+  .pages-nav img {
+    display: block;
+    margin: 0.2rem;
+  }
+}
 .pages-nav ul {
   list-style: none;
+}
+
+@media (max-width: 768px) {
+  .pages-nav ul {
+    display: none;
+  }
 }
 
 .pages-nav ul li {
@@ -86,9 +122,32 @@ html {
   padding-right: 5rem;
 }
 
+@media (max-width: 768px) {
+  .header .search {
+    margin: 0;
+  }
+
+  .header .search-input {
+    display: none;
+  }
+
+  .header .search img {
+    margin: 0;
+  }
+}
+
 .header .search img {
   position: absolute;
   right: 10px;
+}
+
+@media (max-width: 768px) {
+  .header .search {
+    right: -1;
+  }
+  .header .user .search img {
+    margin: 0;
+  }
 }
 
 /* Header user section */
@@ -96,9 +155,21 @@ html {
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 768px) {
+  .header .user {
+    grid-area: 1 / 3 / 2 / 4;
+    justify-content: end;
+  }
+}
 
 .header .user img {
   margin: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .header .user img {
+    margin: 0 1rem;
+  }
 }
 
 /* Hero */
