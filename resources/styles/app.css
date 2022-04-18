@@ -31,7 +31,7 @@ html {
   font-weight: 100;
   background-color: #fff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -46,12 +46,19 @@ html {
   }
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 35rem;
+}
+
 .brand {
   font-size: 1.6rem;
   font-weight: 400;
   display: flex;
-  margin: 0.9rem 0;
-  margin-left: 9rem;
+  /* margin: 0.9rem 0;
+  margin-left: 9rem; */
 }
 
 @media (max-width: 768px) {
@@ -65,8 +72,13 @@ html {
 }
 
 .brand a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #000;
+}
+.brand a img {
+  margin: 0 0.5rem;
 }
 
 /* Header nav */
@@ -80,8 +92,16 @@ html {
     margin: 0.2rem;
   }
 }
+
+.pages-nav .menu {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
 .pages-nav ul {
   list-style: none;
+  padding: 0 1rem;
 }
 
 @media (max-width: 768px) {
@@ -92,7 +112,10 @@ html {
 
 .pages-nav ul li {
   float: right;
-  margin-left: 2rem;
+}
+
+.pages-nav ul li:first-child {
+  margin-left: 1rem;
 }
 
 .page_item {
@@ -111,13 +134,12 @@ html {
   display: flex;
   align-items: center;
   position: relative;
-  margin: 0 3rem;
 }
 
 .header .search-input {
   border: 1.5px solid var(--brown-grey);
   border-radius: 4px;
-  width: 15rem;
+  width: 14rem;
   padding: 0.5rem 0.5rem;
   padding-right: 5rem;
 }
@@ -139,6 +161,7 @@ html {
 .header .search img {
   position: absolute;
   right: 10px;
+  margin: 0 !important;
 }
 
 @media (max-width: 768px) {
@@ -154,6 +177,7 @@ html {
 .header .user {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .header .user {
@@ -163,7 +187,10 @@ html {
 }
 
 .header .user img {
-  margin: 0 2rem;
+  margin: 0 1rem;
+}
+.header .user img:last-child {
+  margin-left: 0;
 }
 
 @media (max-width: 768px) {
