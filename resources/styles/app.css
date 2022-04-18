@@ -274,6 +274,10 @@ html {
   margin: 0.4rem;
 }
 
+.restaurant-card img {
+  height: 14rem;
+}
+
 .restaurant-card h1 {
   font-size: 2rem;
   margin: 0.5rem 0;
