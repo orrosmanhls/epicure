@@ -11,7 +11,7 @@
 
   <div class="container">
 
-    <h3>{{ explode(' ', $chef->name)[0] }}'s restaurants:</h3>
+    <h2>{{ explode(' ', $chef->name)[0] }}'s restaurants:</h2>
 
     <ul class="restaurants-list">
       @foreach($chef->restaurants as $restaurant)

@@ -423,9 +423,10 @@ html {
 .chef-of-the-week {
   display: grid;
   grid-template-columns: 0.2fr 1fr 0.2fr;
-  grid-template-rows: 0.2fr repeat(2, 1fr);
+  /* grid-template-rows: 0.2fr repeat(2, 1fr); */
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  margin: 4rem 0;
 }
 
 .chef-of-the-week h1 {
@@ -434,6 +435,7 @@ html {
 
 .chef-of-the-week .chef-image {
   position: relative;
+  height: fit-content;
 }
 
 .chef-of-the-week .chef-name {
@@ -460,6 +462,7 @@ html {
 
 .chef-of-the-week .container {
   grid-area: 3 / 2 / 4 / 3;
+  margin-top: 2rem;
 }
 
 .chef-of-the-week .container .restaurants-list {
@@ -468,6 +471,14 @@ html {
   justify-content: start;
   flex-direction: row;
   padding: 0;
+}
+
+.chef-of-the-week .restaurant-card img {
+  height: 13.5rem;
+}
+
+.chef-of-the-week .restaurant-card h1 {
+  padding-bottom: 1.2rem;
 }
 
 /* ABOUT US Section */
