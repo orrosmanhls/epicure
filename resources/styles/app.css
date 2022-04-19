@@ -566,10 +566,12 @@ footer div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 20rem;
+  width: 26rem;
 }
 
 footer div a {
   text-decoration: none;
   color: #000;
+  font-size: large;
+  font-weight: bolder;
 }
