@@ -485,7 +485,7 @@ html {
 
 .about-us {
   background-color: #fafafa;
-  padding: 1rem 6rem;
+  padding: 3rem 9rem;
 }
 
 .about-us .container {
@@ -499,21 +499,32 @@ html {
   margin: 0 5rem;
 }
 
+.about-us .container .about-us-info h1 {
+  font-size: xx-large;
+}
+
+.about-us .container .about-us-info p {
+  font-size: x-large;
+  margin: 0.7rem 0;
+}
+
 .about-us .container .about-us-brand {
-  margin: 0 5rem;
+  margin: 0 9rem;
 }
 
 .about-us .container .about-us-brand a {
   text-decoration: none;
   color: black;
+  letter-spacing: 1rem;
 }
 
 .about-us .container .about-us-brand img {
-  height: 6rem;
+  height: 9rem;
 }
 
 .about-us .buttons {
   display: flex;
+  margin-top: 1rem;
 }
 
 .about-us .buttons .download-button:first-child {
@@ -526,8 +537,8 @@ html {
   align-items: center;
   width: fit-content;
   border: 1px solid #000;
-  border-radius: 5px;
-  padding: 0.3rem;
+  border-radius: 9px;
+  padding: 0.6rem;
   justify-content: space-evenly;
   text-decoration: none;
   color: #000;
