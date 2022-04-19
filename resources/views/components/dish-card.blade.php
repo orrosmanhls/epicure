@@ -6,28 +6,24 @@
   <h1>{{ $name }}</h1>
   <p>{{ $ingredients }}</p>
 
-  @foreach($types as $type)
-  @if($type)
-  @switch ($type)
-
-  @case('Spicy')
-  <img height="24px" class="dish-info-icon" src="{{ asset('images/spicy-icon.svg'); }}" alt=''>
-  @break;
-
-  @case('Vegetarian')
-  <img height="24px" class="dish-info-icon" src="{{ asset('images/vegetarian-icon.svg'); }}" alt=''>
-  @break;
-
-  @case('Vegan')
-  <img height="24px" class="dish-info-icon" src="{{ asset('images/vegan-icon.svg'); }}" alt=''>
-  @break;
-
-  @default
-
-
-  @endswitch
-  @endif
-  @endforeach
+  <div class="types">
+    @foreach($types as $type)
+    @if($type)
+    @switch ($type)
+    @case('Spicy')
+    <img height="24px" class="dish-info-icon" src="{{ asset('images/spicy-icon.svg'); }}" alt=''>
+    @break;
+    @case('Vegetarian')
+    <img height="24px" class="dish-info-icon" src="{{ asset('images/vegetarian-icon.svg'); }}" alt=''>
+    @break;
+    @case('Vegan')
+    <img height="24px" class="dish-info-icon" src="{{ asset('images/vegan-icon.svg'); }}" alt=''>
+    @break;
+    @default
+    @endswitch
+    @endif
+    @endforeach
+  </div>
 
   <h3 class="price">
     <span>₪{{ $price }}</span>
