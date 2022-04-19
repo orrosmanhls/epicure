@@ -18,6 +18,7 @@
 html {
   font-size: 16px;
   font-family: "HelveticaNeue";
+  letter-spacing: 2px;
 }
 
 .text-center {
@@ -30,32 +31,89 @@ html {
   font-weight: 100;
   background-color: #fff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0.7rem;
+  }
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 35rem;
+}
+
 .brand {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 400;
   display: flex;
-  margin: 0.9rem 0;
-  margin-left: 9rem;
+}
+
+@media (max-width: 768px) {
+  .brand {
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
 }
 
 .brand a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #000;
 }
+.brand a img {
+  margin: 0 0.7rem;
+}
 
 /* Header nav */
+.pages-nav img {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .pages-nav img {
+    display: block;
+    margin: 0.2rem;
+  }
+}
+
+.pages-nav .menu {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
 
 .pages-nav ul {
   list-style: none;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .pages-nav ul {
+    display: none;
+  }
 }
 
 .pages-nav ul li {
   float: right;
-  margin-left: 2rem;
+}
+
+.pages-nav ul li:first-child {
+  margin-left: 1rem;
 }
 
 .page_item {
@@ -74,39 +132,74 @@ html {
   display: flex;
   align-items: center;
   position: relative;
-  margin: 0 3rem;
 }
 
 .header .search-input {
   border: 1.5px solid var(--brown-grey);
   border-radius: 4px;
-  width: 15rem;
+  width: 14rem;
   padding: 0.5rem 0.5rem;
   padding-right: 5rem;
+}
+
+@media (max-width: 768px) {
+  .header .search {
+    margin: 0;
+  }
+
+  .header .search-input {
+    display: none;
+  }
+
+  .header .search img {
+    margin: 0;
+  }
 }
 
 .header .search img {
   position: absolute;
   right: 10px;
+  margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .header .search {
+    right: -1;
+  }
+  .header .user .search img {
+    margin: 0;
+  }
 }
 
 /* Header user section */
 .header .user {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .header .user {
+    grid-area: 1 / 3 / 2 / 4;
+    justify-content: end;
+  }
 }
 
 .header .user img {
-  margin: 0 2rem;
+  margin: 0 1rem;
+}
+.header .user img:last-child {
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .header .user img {
+    margin: 0 1rem;
+  }
 }
 
 /* Hero */
 .hero {
   position: relative;
-}
-.hero img {
-  width: 100%;
-  height: auto;
 }
 
 .hero .hero-text {
@@ -117,27 +210,41 @@ html {
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.88);
   text-align: center;
-  padding: 1.5rem 9rem;
+  width: max-content;
+  padding: 2.5rem 5rem;
+}
+
+@media (max-width: 768px) {
+  .hero .hero-text {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+  }
 }
 
 .hero .hero-text .search {
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
-  margin: 0 3rem;
+  margin: 2rem 3rem 0.5rem 3rem;
 }
 
 .hero .hero-text .search .search-input {
   border: 1.5px solid var(--brown-grey);
   border-radius: 4px;
-  width: 15rem;
+  width: 28rem;
   padding: 0.5rem 2rem;
-  background-color: rgba(255, 255, 255, 0.88);
+  background-color: hsla(0, 0%, 0%, 0); /* transparent background */
+  opacity: 0.9;
+  height: 1.4rem;
+  font-size: 1.25rem;
+  font-weight: lighter;
+  text-indent: 1rem;
 }
 
 .hero .search img {
   height: 1.5rem;
-  left: -8.3rem;
+  left: 1rem;
   position: absolute;
 }
 
@@ -147,16 +254,27 @@ html {
   margin-top: 10rem;
 }
 
+.restaurants .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
 .restaurants-list {
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .restaurant-card {
   background-color: var(--beige);
   text-align: center;
+  margin: 0.4rem;
+}
+
+.restaurant-card img {
+  height: 14rem;
 }
 
 .restaurant-card h1 {
@@ -181,32 +299,62 @@ html {
 /* Dishes Section */
 
 .dishes {
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 .dishes-list {
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
+.dishes-list li {
+  margin: 0 0.3rem;
+}
 .dish-card-content {
   background-color: var(--beige);
   text-align: center;
   height: 30rem;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 0.5fr) 2fr repeat(2, 0.5fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-.dish-card h1 {
-  font-size: 2rem;
-  margin: 0.5rem 0;
-  margin-top: 1rem;
+.dish-card-content img {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.dish-card-content h1 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.dish-card-content p {
+  grid-area: 3 / 1 / 4 / 2;
+  padding: 0 1rem;
+}
+
+.dish-card-content .types {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 0;
+}
+
+.dish-card-content .dish-info-icon {
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+.dish-card-content .price {
+  grid-area: 5 / 1 / 6 / 2;
 }
 
 .dish-card p {
   font-size: 1rem;
-  margin: 0 0 1rem 0;
+  margin: 0;
 }
 
 .all-dishes {
@@ -270,8 +418,23 @@ html {
 }
 
 /* Chef of the week  section*/
+
+.chef-of-the-week {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  /* grid-template-rows: 0.2fr repeat(2, 1fr); */
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 4rem 0;
+}
+
+.chef-of-the-week h1 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
 .chef-of-the-week .chef-image {
   position: relative;
+  height: fit-content;
 }
 
 .chef-of-the-week .chef-name {
@@ -285,22 +448,43 @@ html {
 }
 
 .chef-info {
+  grid-area: 2 / 2 / 3 / 3;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .chef-info p {
   font-size: larger;
-  width: 40%;
   text-align: justify;
   margin: 0 2rem;
+}
+
+.chef-of-the-week .container {
+  grid-area: 3 / 2 / 4 / 3;
+  margin-top: 2rem;
+}
+
+.chef-of-the-week .container .restaurants-list {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  padding: 0;
+}
+
+.chef-of-the-week .restaurant-card img {
+  height: 13.5rem;
+}
+
+.chef-of-the-week .restaurant-card h1 {
+  padding-bottom: 1.2rem;
 }
 
 /* ABOUT US Section */
 
 .about-us {
   background-color: #fafafa;
-  padding: 1rem 6rem;
+  padding: 3rem 9rem;
 }
 
 .about-us .container {
@@ -314,21 +498,32 @@ html {
   margin: 0 5rem;
 }
 
+.about-us .container .about-us-info h1 {
+  font-size: xx-large;
+}
+
+.about-us .container .about-us-info p {
+  font-size: x-large;
+  margin: 0.7rem 0;
+}
+
 .about-us .container .about-us-brand {
-  margin: 0 5rem;
+  margin: 0 9rem;
 }
 
 .about-us .container .about-us-brand a {
   text-decoration: none;
   color: black;
+  letter-spacing: 1rem;
 }
 
 .about-us .container .about-us-brand img {
-  height: 6rem;
+  height: 9rem;
 }
 
 .about-us .buttons {
   display: flex;
+  margin-top: 1rem;
 }
 
 .about-us .buttons .download-button:first-child {
@@ -341,8 +536,8 @@ html {
   align-items: center;
   width: fit-content;
   border: 1px solid #000;
-  border-radius: 5px;
-  padding: 0.3rem;
+  border-radius: 9px;
+  padding: 0.6rem;
   justify-content: space-evenly;
   text-decoration: none;
   color: #000;
@@ -370,10 +565,12 @@ footer div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 20rem;
+  width: 26rem;
 }
 
 footer div a {
   text-decoration: none;
   color: #000;
+  font-size: large;
+  font-weight: bolder;
 }

@@ -7,7 +7,7 @@
         turpis suscipit at. Vestibulum sed massa in magna sodales porta. Vivamus elit urna,
         dignissim a vestibulum.
       </p>
-      <br>
+
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no
         eu ipsum. Cras porta malesuada eros.</p>
@@ -19,7 +19,10 @@
 
     </div>
     <div class="about-us-brand text-center">
-      <a href="/"><img src="{{ asset('images/about-logo.png') }}" alt="logo">EPICURE</a>
+      <a href="/">
+        <img src="{{ asset('images/about-logo.png') }}" alt="logo">
+        <h2>EPICURE</h2>
+      </a>
     </div>
   </div>
 </section>

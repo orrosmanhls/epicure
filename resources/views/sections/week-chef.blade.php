@@ -1,5 +1,7 @@
-<section class="chef-of-the-week text-center">
-  <h1>CHEF OF THE WEEK:</h1>
+<section class="chef-of-the-week">
+
+  <h1 class="text-center">CHEF OF THE WEEK:</h1>
+
   @php $chef =epicure_random_chef() @endphp
 
   <div class="chef-info">
@@ -7,15 +9,19 @@
     <p>{{ $chef->info }}</p>
   </div>
 
-  <h3>{{ explode(' ', $chef->name)[0] }}'s restaurants:</h3>
-  <ul class="restaurants-list">
+  <div class="container">
 
-    @foreach($chef->restaurants as $restaurant)
-    <li class="restaurant-card">
-      <x-restaurant-card source="{{ $restaurant->image }}" name="{{ $restaurant->name }}" />
-    </li>
-    @endforeach
-  </ul>
+    <h2>{{ explode(' ', $chef->name)[0] }}'s restaurants:</h2>
+
+    <ul class="restaurants-list">
+      @foreach($chef->restaurants as $restaurant)
+      <li class="restaurant-card">
+        <x-restaurant-card source="{{ $restaurant->image }}" name="{{ $restaurant->name }}" />
+      </li>
+      @endforeach
+    </ul>
+
+  </div>
 
 
 </section>
