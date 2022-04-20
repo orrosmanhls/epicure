@@ -554,11 +554,16 @@ html {
 
 @media (max-width: 768px) {
   .chef-info {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 
   .chef-image {
     margin: auto;
+    grid-area: 1 / 1 / 2 / 2;
   }
 }
 
@@ -571,6 +576,10 @@ html {
 @media (max-width: 768px) {
   .chef-info p {
     text-align: center;
+    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 2 / 1 / 3 / 2;
+    margin: auto;
+    width: 22rem;
   }
 }
 
