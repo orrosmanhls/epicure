@@ -37,11 +37,6 @@ html {
 
 @media (max-width: 768px) {
   .header {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
     padding: 0.7rem;
   }
 }
@@ -51,6 +46,13 @@ html {
   align-items: center;
   justify-content: end;
   width: 35rem;
+}
+
+@media (max-width: 768px) {
+  .header-left {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
 }
 
 .brand {
@@ -85,6 +87,11 @@ html {
 }
 
 @media (max-width: 768px) {
+  .pages-nav {
+    position: absolute;
+    left: 1rem;
+  }
+
   .pages-nav img {
     display: block;
     margin: 0.2rem;
