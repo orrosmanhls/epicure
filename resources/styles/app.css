@@ -209,6 +209,12 @@ html {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .hero img {
+    width: 100%;
+  }
+}
+
 .hero .hero-text {
   font-size: 2.313rem;
   position: absolute;
@@ -249,10 +255,27 @@ html {
   text-indent: 1rem;
 }
 
+@media (max-width: 768px) {
+  .hero .hero-text .search .search {
+    margin: 0;
+  }
+
+  .hero .hero-text .search .search-input {
+    width: 19rem;
+    font-size: 1.1rem;
+  }
+}
+
 .hero .search img {
   height: 1.5rem;
   left: 1rem;
   position: absolute;
+}
+
+@media (max-width: 768px) {
+  .hero .hero-text .search img {
+    left: -9.6rem;
+  }
 }
 
 /* Restaurants Section */
