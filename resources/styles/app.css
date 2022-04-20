@@ -713,12 +713,12 @@ html {
 }
 
 @media (max-width: 768px) {
-  .about-us .about-us-buttons {
+  .about-us .container .about-us-buttons {
     margin: 2rem 0;
   }
 
-  .about-us .about-us-brand {
-    margin-top: 2rem;
+  .about-us .container .about-us-brand {
+    margin: 2rem 9rem;
   }
 }
 
