@@ -612,6 +612,12 @@ html {
   padding: 3rem 9rem;
 }
 
+@media (min-width: 768px) {
+  .about-us {
+    padding: 0;
+  }
+}
+
 .about-us .container {
   display: flex;
   align-items: center;
@@ -698,4 +704,15 @@ footer div a {
   color: #000;
   font-size: large;
   font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+  footer div {
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+  }
+  footer div a {
+    margin: 1rem 0;
+  }
 }
