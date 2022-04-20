@@ -363,11 +363,28 @@ html {
   margin-top: 5rem;
 }
 
+@media (max-width: 768px) {
+  .dishes {
+    margin-top: 2rem;
+  }
+  .dishes h2 {
+    font-size: medium;
+  }
+}
+
 .dishes-list {
   list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .dishes-list {
+    overflow-x: scroll;
+    padding: 0;
+    justify-content: initial;
+  }
 }
 
 .dishes-list li {
@@ -385,8 +402,16 @@ html {
   grid-row-gap: 0px;
 }
 
-.dish-card-content img {
+.dish-card-content .dish-cover-image {
   grid-area: 1 / 1 / 2 / 2;
+}
+
+@media (max-width: 768px) {
+  .dish-card-content .dish-cover-image {
+    height: 14rem;
+    width: 13.5rem;
+    object-fit: cover;
+  }
 }
 
 .dish-card-content h1 {

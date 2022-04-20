@@ -1,7 +1,7 @@
 <h2>{{ $restaurant }}</h2>
 
 <div class="dish-card-content" style="max-width:{{ $width }}px">
-  <img src="{{ $source }}" alt="">
+  <img class="dish-cover-image" src="{{ $source }}" alt="">
 
   <h1>{{ $name }}</h1>
   <p>{{ $ingredients }}</p>
