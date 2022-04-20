@@ -52,6 +52,7 @@ html {
   .header-left {
     flex-direction: row-reverse;
     justify-content: center;
+    margin-left: 4rem;
   }
 }
 
