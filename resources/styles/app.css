@@ -284,6 +284,15 @@ html {
   margin-top: 10rem;
 }
 
+@media (max-width: 768px) {
+  .restaurants {
+    margin-top: 2rem;
+  }
+  .restaurants h2 {
+    font-size: medium;
+  }
+}
+
 .restaurants .container {
   display: flex;
   flex-direction: column;
@@ -297,6 +306,14 @@ html {
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .restaurants-list {
+    overflow-x: scroll;
+    padding: 0;
+    justify-content: initial;
+  }
+}
+
 .restaurant-card {
   background-color: var(--beige);
   text-align: center;
@@ -305,6 +322,14 @@ html {
 
 .restaurant-card img {
   height: 14rem;
+}
+
+@media (max-width: 768px) {
+  .restaurant-card img {
+    height: 15rem;
+    width: 12.5rem;
+    object-fit: cover;
+  }
 }
 
 .restaurant-card h1 {
@@ -324,6 +349,12 @@ html {
   font-size: 1.5rem;
   color: var(--black);
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .all-restaurants {
+    display: none;
+  }
 }
 
 /* Dishes Section */
