@@ -514,8 +514,20 @@ html {
   margin: 4rem 0;
 }
 
+@media (max-width: 768px) {
+  .chef-of-the-week {
+    display: block;
+  }
+}
+
 .chef-of-the-week h1 {
   grid-area: 1 / 2 / 2 / 3;
+}
+
+@media (min-width: 768px) {
+  .chef-of-the-week h1 {
+    font-size: medium;
+  }
 }
 
 .chef-of-the-week .chef-image {
@@ -539,15 +551,42 @@ html {
   justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .chef-info {
+    flex-direction: column;
+  }
+
+  .chef-image {
+    margin: auto;
+  }
+}
+
 .chef-info p {
   font-size: larger;
   text-align: justify;
   margin: 0 2rem;
 }
 
+@media (max-width: 768px) {
+  .chef-info p {
+    text-align: center;
+  }
+}
+
 .chef-of-the-week .container {
   grid-area: 3 / 2 / 4 / 3;
   margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .chef-of-the-week .container {
+    margin: 0 1rem;
+    margin-top: 4rem;
+  }
+
+  .chef-of-the-week .container h2 {
+    font-size: large;
+  }
 }
 
 .chef-of-the-week .container .restaurants-list {
