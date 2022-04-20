@@ -612,9 +612,10 @@ html {
   padding: 3rem 0;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .about-us {
-    padding: 0;
+    padding: 0 3rem;
+    text-align: center;
   }
 }
 
@@ -625,6 +626,15 @@ html {
   grid-column-gap: 0;
   margin-left: 9rem;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .about-us .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0 3rem;
+  }
 }
 
 .about-us .container h1 {
@@ -682,6 +692,16 @@ html {
 .download-button a span div {
   font-weight: bolder;
   font-size: larger;
+}
+
+@media (max-width: 768px) {
+  .about-us .about-us-buttons {
+    margin: 2rem 0;
+  }
+
+  .about-us .about-us-brand {
+    margin-top: 2rem;
+  }
 }
 
 /* Footer */
