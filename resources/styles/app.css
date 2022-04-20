@@ -609,7 +609,7 @@ html {
 
 .about-us {
   background-color: #fafafa;
-  padding: 3rem 9rem;
+  padding: 3rem 0;
 }
 
 @media (min-width: 768px) {
@@ -619,27 +619,28 @@ html {
 }
 
 .about-us .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 0.2fr 0fr 0.4fr;
+  grid-column-gap: 0;
+  margin-left: 9rem;
   align-items: center;
 }
 
-.about-us .container .about-us-info {
-  display: flex;
-  flex-direction: column;
-  margin: 0 5rem;
-}
-
-.about-us .container .about-us-info h1 {
+.about-us .container h1 {
+  grid-area: 1 / 1 / 2 / 3;
   font-size: xx-large;
 }
 
-.about-us .container .about-us-info p {
+.about-us .container .about-us-info {
   font-size: x-large;
   margin: 0.7rem 0;
+  grid-area: 2 / 1 / 3 / 2;
 }
 
 .about-us .container .about-us-brand {
   margin: 0 9rem;
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 .about-us .container .about-us-brand a {
@@ -652,12 +653,12 @@ html {
   height: 9rem;
 }
 
-.about-us .buttons {
+.about-us .about-us-buttons {
   display: flex;
-  margin-top: 1rem;
+  grid-area: 3 / 1 / 4 / 3;
 }
 
-.about-us .buttons .download-button:first-child {
+.about-us .about-us-buttons .download-button:first-child {
   margin-right: 1rem;
 }
 
