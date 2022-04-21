@@ -1,8 +1,5 @@
 @include('sections.header')
-@include('sections.hero')
-@include('sections.restaurants')
-@include('sections.signature-dishes')
-@include('sections.icon-definitions')
-@include('sections.week-chef')
-@include('sections.about-us')
+
+@yield('content')
+
 @include('sections.footer')
