@@ -761,9 +761,5 @@ footer div a {
 
 .restaurants .container .restaurants-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, 23.5rem);
 }
-
-/* .restaurants .container .restaurants-list .restaurant-card {
-  flex: 1 1;
-} */
