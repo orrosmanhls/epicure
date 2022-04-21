@@ -772,6 +772,10 @@ footer div a {
 }
 
 .restaurants .container .restaurants-list {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 23.5rem);
+  grid-template-columns: repeat(2, minmax(10rem, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  overflow: initial;
 }
