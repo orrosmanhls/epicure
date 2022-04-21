@@ -1,8 +1,6 @@
 <section class="restaurants">
 
-  <h2 class="text-center">THE POPULAR RESTAURANTS IN EPICURE:</h2>
-
-  @php $restaurants =epicure_restaurants_list(3)@endphp
+  @php $restaurants =epicure_restaurants_list($restaurants_per_page)@endphp
 
   <div class="container">
     <ul class="restaurants-list">
@@ -14,10 +12,6 @@
       @endforeach
     </ul>
 
-    <a href="/restaurants" class="all-restaurants">
-      All Restaurants >>
-    </a>
   </div>
-
 
 </section>

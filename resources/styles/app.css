@@ -281,20 +281,20 @@ html {
 
 /* Restaurants Section */
 
-.restaurants {
+.homepage-restaurants {
   margin-top: 10rem;
 }
 
 @media (max-width: 768px) {
-  .restaurants {
+  .homepage-restaurants {
     margin-top: 2rem;
   }
-  .restaurants h2 {
+  .homepage-restaurants h2 {
     font-size: medium;
   }
 }
 
-.restaurants .container {
+.homepage-restaurants .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -756,3 +756,14 @@ footer div a {
     margin: 1rem 0;
   }
 }
+
+/* Restaurants page */
+
+.restaurants .container .restaurants-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+/* .restaurants .container .restaurants-list .restaurant-card {
+  flex: 1 1;
+} */
