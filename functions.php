@@ -99,6 +99,7 @@ function epicure_restaurants_list($number_of_restaurants = -1)
         $restaurant->chef = get_field('chef_name');
         $restaurant->opening_hour = get_field('opening_time');
         $restaurant->closing_hour = get_field('closing_time');
+        $restaurant->date_added = get_the_date();
 
         array_push($restaurants, $restaurant);
     endwhile;
@@ -192,6 +193,18 @@ function is_open($open_str, $close_str)
     $close_time = strtotime($close_str);
 
     if ($current_time >= $open_time && $close_time >= $current_time) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function is_new($date_added)
+{
+    $time = strtotime($date_added);
+    $one_month = 60 * 60 * 24 * 30; // seconds * minutes * hours * days
+
+    if ($time > time() - $one_month) {
         return true;
     } else {
         return false;

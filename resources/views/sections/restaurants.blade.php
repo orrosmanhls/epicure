@@ -10,6 +10,7 @@
       @foreach($restaurants as $restaurant)
 
       @switch($filter)
+
       @case('Open Now')
       @if(is_open($restaurant->opening_hour,$restaurant->closing_hour))
       <li class="restaurant-card">
@@ -21,6 +22,20 @@
       </li>
       @endif
       @break
+
+      @case('New')
+
+
+      @if(is_new($restaurant->date_added))
+      <li class="restaurant-card">
+        @component('components.restaurant-card',
+        ['source'=>$restaurant->image,'name'=>$restaurant->name,'chef'=>$restaurant->chef])
+        @endcomponent
+
+      </li>
+      @endif
+      @break
+
 
       @default
       <li class="restaurant-card">
