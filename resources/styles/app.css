@@ -759,16 +759,20 @@ footer div a {
 
 /* Restaurants page */
 
-.filter-bar .tabs {
+.tabs .menu {
   display: flex;
   list-style: none;
   justify-content: space-evenly;
   padding: 0;
 }
 
-.filter-bar .tabs .tab a {
+.tabs .menu .menu-item a {
   text-decoration: none;
   color: #000;
+}
+
+.tabs .menu .current_page_item {
+  font-weight: bolder;
 }
 
 .restaurants .container .restaurants-list {

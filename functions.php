@@ -97,6 +97,8 @@ function epicure_restaurants_list($number_of_restaurants = -1)
         $restaurant->name = get_the_title();
         $restaurant->image = get_the_post_thumbnail_url();
         $restaurant->chef = get_field('chef_name');
+        $restaurant->opening_hour = get_field('opening_time');
+        $restaurant->closing_hour = get_field('closing_time');
 
         array_push($restaurants, $restaurant);
     endwhile;
@@ -180,4 +182,18 @@ function epicure_random_chef()
     ?>
 
 <?php
+}
+
+function is_open($open_str, $close_str)
+{
+
+    $current_time = strtotime(date('h:i'));
+    $open_time = strtotime($open_str);
+    $close_time = strtotime($close_str);
+
+    if ($current_time >= $open_time && $close_time >= $current_time) {
+        return true;
+    } else {
+        return false;
+    }
 }

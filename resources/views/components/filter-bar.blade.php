@@ -1,9 +1,8 @@
-<div class="filter-bar">
-  <ul class="tabs">
-    @foreach ($filters as $filter)
-    <li class="tab">
-      <a href="">{{ $filter }}</a>
-    </li>
-    @endforeach
-  </ul>
-</div>
+@php
+$args = array(
+'menu' => 'filter-restaurants',
+'container' => 'nav',
+'container_class' => 'tabs',
+);
+wp_nav_menu($args);
+@endphp
