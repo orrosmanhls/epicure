@@ -100,6 +100,7 @@ function epicure_restaurants_list($number_of_restaurants = -1)
         $restaurant->opening_hour = get_field('opening_time');
         $restaurant->closing_hour = get_field('closing_time');
         $restaurant->date_added = get_the_date();
+        $restaurant->popularity = get_field('popularity');
 
         array_push($restaurants, $restaurant);
     endwhile;

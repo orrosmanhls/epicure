@@ -24,8 +24,6 @@
       @break
 
       @case('New')
-
-
       @if(is_new($restaurant->date_added))
       <li class="restaurant-card">
         @component('components.restaurant-card',
@@ -34,6 +32,18 @@
 
       </li>
       @endif
+      @break
+
+      @case('Most Popular')
+      @if($restaurant->popularity > 4)
+      <li class="restaurant-card">
+        @component('components.restaurant-card',
+        ['source'=>$restaurant->image,'name'=>$restaurant->name,'chef'=>$restaurant->chef])
+        @endcomponent
+
+      </li>
+      @endif
+
       @break
 
 
