@@ -1,4 +1,4 @@
-import {domReady} from '@roots/sage/client';
+import { domReady } from "@roots/sage/client";
 
 /**
  * app.main
@@ -9,7 +9,19 @@ const main = async (err) => {
     console.error(err);
   }
 
-  // application code
+  document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+    const menu = document.getElementById("mobile-menu");
+    menu.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  });
+
+  document
+    .getElementById("mobile-menu-close-btn")
+    .addEventListener("click", () => {
+      const menu = document.getElementById("mobile-menu");
+      menu.style.display = "none";
+      document.body.style.overflow = "initial";
+    });
 };
 
 /**
