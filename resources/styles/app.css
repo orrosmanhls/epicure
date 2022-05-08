@@ -52,7 +52,7 @@ html {
   .header-left {
     flex-direction: row-reverse;
     justify-content: center;
-    margin-left: 4rem;
+    margin-left: 7rem;
   }
 }
 
@@ -165,7 +165,7 @@ html {
 }
 
 .header .search img {
-  position: absolute;
+  position: initial;
   right: 10px;
   margin: 0 !important;
 }
@@ -301,11 +301,11 @@ html {
   text-align: right;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .restaurants .container {
     margin: 0 1rem;
   }
-}
+} */
 
 .restaurants-list {
   list-style: none;
@@ -334,7 +334,7 @@ html {
 
 @media (max-width: 768px) {
   .restaurant-card img {
-    height: 15rem;
+    height: 10rem;
     width: 12.5rem;
     object-fit: cover;
   }
@@ -776,7 +776,6 @@ footer div a {
 }
 
 .restaurants .container .restaurants-list {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(10rem, 1fr));
   gap: 1rem;
