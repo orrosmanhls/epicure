@@ -165,7 +165,7 @@ html {
 }
 
 .header .search img {
-  position: initial;
+  position: absolute;
   right: 10px;
   margin: 0 !important;
 }
@@ -765,7 +765,16 @@ footer div a {
   justify-content: space-evenly;
   padding: 0;
 }
+@media (min-width: 768px) {
+  .tabs {
+    display: flex;
+    justify-content: center;
+  }
 
+  .tabs .menu {
+    gap: 2rem;
+  }
+}
 .tabs .menu .menu-item a {
   text-decoration: none;
   color: #000;
@@ -781,4 +790,14 @@ footer div a {
   gap: 1rem;
   justify-items: center;
   overflow: initial;
+}
+
+@media (min-width: 768px) {
+  .restaurants .container .restaurants-list {
+    display: grid;
+    grid-template-columns: repeat(3, fit-content(10rem));
+    gap: 1rem;
+    justify-items: center;
+    overflow: initial;
+  }
 }
