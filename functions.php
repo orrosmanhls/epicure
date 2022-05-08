@@ -189,15 +189,11 @@ function epicure_random_chef()
 function is_open($open_str, $close_str)
 {
 
-    $current_time = strtotime(date('h:i'));
-    $open_time = strtotime($open_str);
-    $close_time = strtotime($close_str);
+    $current_time = date('h:i');
+    $open_time = date('h:i', strtotime($open_str));
+    $close_time = date('h:i', strtotime($close_str));
 
-    if ($current_time >= $open_time && $close_time >= $current_time) {
-        return true;
-    } else {
-        return false;
-    }
+    return $current_time >= $open_time && $close_time >= $current_time;
 }
 
 function is_new($date_added)
