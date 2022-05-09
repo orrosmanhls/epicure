@@ -2,7 +2,7 @@
 
   <h2 class="text-center">SIGNATURE DISH OF:</h2>
 
-  @php $dishes = epicure_dishes_list(3) @endphp
+  @php $dishes = epicure_dishes_list($dishes_per_page) @endphp
 
 
   <ul class="dishes-list">

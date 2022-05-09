@@ -10,6 +10,7 @@
       <x-button-icon source="{{ asset('../images/mobile-menu.svg') }}" />
       <?php
           $args = array(
+              'menu'=>  'pages',
               'theme_location'  =>  'pages',
               'container'       => 'nav',
               'container_class' => 'pages',
