@@ -1,3 +1,4 @@
+@include('sections.mobile-menu')
 <header class="header">
   <div class="header-left">
     <div class="brand">
@@ -6,8 +7,11 @@
         <span>EPICURE</span>
       </a>
     </div>
+
     <div class="pages-nav">
-      <x-button-icon source="{{ asset('../images/mobile-menu.svg') }}" />
+      <span id="mobile-menu-btn">
+        <x-button-icon source="{{ asset('../images/mobile-menu.svg') }}" />
+      </span>
       <?php
           $args = array(
               'menu'=>  'pages',
