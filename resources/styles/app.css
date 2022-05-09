@@ -350,19 +350,20 @@ h6 {
   flex-direction: column;
   justify-content: center;
   text-align: right;
+  width: min-content;
+  margin: auto;
 }
-
-/* @media (max-width: 768px) {
-  .restaurants .container {
-    margin: 0 1rem;
+@media (max-width: 768px) {
+  .homepage-restaurants .container {
+    width: initial;
   }
-} */
-
+}
 .restaurants-list {
   list-style: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
@@ -405,10 +406,13 @@ h6 {
 
 .all-restaurants {
   float: right;
-  margin-right: 3rem;
   font-size: 1.5rem;
   color: var(--black);
   text-decoration: none;
+  font-weight: 300;
+}
+.all-restaurants img {
+  height: 0.9rem;
 }
 
 @media (max-width: 768px) {
@@ -437,6 +441,7 @@ h6 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 0;
 }
 
 @media (max-width: 768px) {

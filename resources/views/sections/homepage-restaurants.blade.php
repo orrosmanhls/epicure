@@ -15,7 +15,8 @@
     </ul>
 
     <a href="/restaurants" class="all-restaurants">
-      All Restaurants >>
+      <span>All Restaurants</span>
+      <img src="{{ asset('images/all-restaurants-arrows.svg') }}" alt="arows">
     </a>
   </div>
 
