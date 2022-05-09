@@ -41,6 +41,14 @@ const main = async (err) => {
 
       const searchResults = event.target.nextElementSibling;
 
+      input.addEventListener("blur", () => {
+        searchResults.style.display = "none";
+      });
+
+      input.addEventListener("focus", () => {
+        searchResults.style.display = "flex";
+      });
+
       const searchData = {};
 
       if (results.restaurants.length > 0) {
