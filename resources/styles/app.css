@@ -282,11 +282,16 @@ h6 {
 
 .hero .hero-text .search {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   position: relative;
   margin: 2rem 3rem 0.5rem 3rem;
+}
+
+@media (max-width: 768px) {
+  .hero .hero-text .search {
+    margin: 0.7rem;
+  }
 }
 
 .hero .hero-text .search .search-input {
@@ -295,7 +300,6 @@ h6 {
   width: 28rem;
   padding: 0.5rem 2rem;
   background-color: hsla(0, 0%, 0%, 0); /* transparent background */
-  opacity: 0.9;
   height: 1.4rem;
   font-size: 1.25rem;
   font-weight: lighter;
@@ -322,12 +326,6 @@ h6 {
   height: 1.5rem;
   left: 1rem;
   position: absolute;
-}
-
-@media (max-width: 768px) {
-  .hero .hero-text .search img {
-    left: -9.6rem;
-  }
 }
 
 /* Restaurants Section */
