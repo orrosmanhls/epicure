@@ -237,6 +237,7 @@ html {
 
 .hero .hero-text .search {
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   position: relative;
@@ -270,6 +271,7 @@ html {
 .hero .search img {
   height: 1.5rem;
   left: 1rem;
+  /* top: 0.6rem; */
   position: absolute;
 }
 
@@ -853,4 +855,65 @@ footer div a {
   text-decoration: none;
   color: var(--brown-grey);
   margin: 1rem 0;
+}
+
+/* Search Results Header */
+
+.header .header-right .user .search .search-results {
+  background-color: white;
+  position: absolute;
+  top: 2.6rem;
+  width: 100%;
+  text-align: left;
+  font-size: initial;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1;
+}
+
+.header .header-right .user .search .search-results div {
+  padding: 0 2rem;
+}
+
+.header .header-right .user .search .search-results div:first-child {
+  padding-top: 1rem;
+}
+
+.header .header-right .user .search .search-results div:last-child {
+  padding-bottom: 1rem;
+}
+
+.header .header-right .user .search .search-results .result-type {
+  color: var(--brown-grey);
+}
+
+/* Search Results Hero */
+
+.hero .hero-text .search .search-results {
+  background-color: white;
+  position: absolute;
+  top: 2.6rem;
+  width: 100%;
+  text-align: left;
+  font-size: initial;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.hero .hero-text .search .search-results div {
+  padding: 0 5rem;
+}
+
+.hero .hero-text .search .search-results div:first-child {
+  padding-top: 1rem;
+}
+
+.hero .hero-text .search .search-results div:last-child {
+  padding-bottom: 1rem;
+}
+
+.hero .hero-text .search .search-results .result-type {
+  color: var(--brown-grey);
 }
