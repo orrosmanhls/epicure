@@ -27,14 +27,10 @@
 
 
   <div class="header-right">
-    <div class="user">
-      <x-search-input>
-        @section('icon')
-        <x-button-icon source="{{ asset('../images/search-icon.svg') }}" />
-        @endsection
-      </x-search-input>
-      <x-button-icon source="{{ asset('../images/user-icon.svg') }}" alt_text="user icon" />
-      <x-button-icon source="{{ asset('../images/bag-icon.svg') }}" alt_text="bag icon" />
-    </div>
+    <x-search-input>
+      @section('icon')
+      <x-button-icon source="{{ asset('../images/search-icon.svg') }}" />
+      @endsection
+    </x-search-input>
   </div>
 </header>
