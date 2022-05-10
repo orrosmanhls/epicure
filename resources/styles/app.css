@@ -465,7 +465,8 @@ h6 {
 .dish-card-content {
   background-color: var(--beige);
   text-align: center;
-  height: 30rem;
+  height: 29rem;
+  width: 22.5rem;
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -476,6 +477,7 @@ h6 {
 
 .dish-card-content .dish-cover-image {
   grid-area: 1 / 1 / 2 / 2;
+  width: 22.5rem;
 }
 
 @media (max-width: 768px) {
@@ -558,9 +560,14 @@ h6 {
 
 .icon-definitions {
   background-color: #fafafa;
-  opacity: 0.9;
   padding: 1rem 5rem;
   margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .icon-definitions {
+    padding: 1rem 0;
+  }
 }
 
 .icon-definitions ul {
@@ -574,6 +581,12 @@ h6 {
 
 .icon-definitions ul li {
   margin: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .icon-definitions ul li img {
+    height: 2.5rem;
+  }
 }
 
 /* Chef of the week  section*/
@@ -675,7 +688,7 @@ h6 {
 .chef-of-the-week .container .restaurants-list {
   list-style: none;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-direction: row;
   padding: 0;
 }
