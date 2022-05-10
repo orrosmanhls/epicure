@@ -984,7 +984,7 @@ footer div a {
 
 #mobile-menu .content .pages .menu {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   text-align: center;
   padding: 0;
   margin: 0;
