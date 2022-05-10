@@ -450,12 +450,17 @@ h6 {
     overflow-x: scroll;
     padding: 0;
     justify-content: initial;
-    margin: 0 1rem;
   }
 }
 
 .dishes-list li {
   margin: 0 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .dishes-list li {
+    margin: 0 0.4rem;
+  }
 }
 
 .dishes-list li h2 {
@@ -465,7 +470,7 @@ h6 {
 .dish-card-content {
   background-color: var(--beige);
   text-align: center;
-  height: 29rem;
+  height: 30rem;
   width: 22.5rem;
   position: relative;
   display: grid;
@@ -481,9 +486,13 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  .dish-card-content {
+    width: 12.5rem;
+  }
+
   .dish-card-content .dish-cover-image {
     height: 14rem;
-    width: 13.5rem;
+    width: 12.5rem;
     object-fit: cover;
   }
 }
