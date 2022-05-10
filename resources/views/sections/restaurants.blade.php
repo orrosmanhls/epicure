@@ -1,5 +1,5 @@
 <section class="restaurants">
-
+  <h1 class="text-center title">Restaurants</h1>
   @php $restaurants =epicure_restaurants_list($restaurants_per_page)@endphp
   @component('components.filter-bar',['filters'=>array('All','New','Most Popular','Open
   Now'),'restaurants'=>$restaurants])
