@@ -74,6 +74,7 @@ h6 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 768px) {
@@ -852,6 +853,10 @@ footer {
   flex-direction: row;
   justify-content: center;
   padding: 2rem 0;
+  box-shadow: 0 -1px 2px 0 rgb(0 0 0 / 5%);
+  position: static;
+  bottom: 0;
+  width: 100%;
 }
 
 footer div {
