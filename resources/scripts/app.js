@@ -39,6 +39,16 @@ const main = async (err) => {
       document.body.style.overflow = "initial";
     });
 
+  document
+    .querySelector(".hero .hero-text .search .search-input")
+    .addEventListener("focus", () => {
+      if (window.screen.width <= 768) {
+        const search = document.querySelector(".mobile-search");
+        search.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+    });
+
   const restaurants = JSON.parse(
     document.getElementsByClassName("restaurants-value")[0].value
   );
