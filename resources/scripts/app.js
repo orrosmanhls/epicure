@@ -102,11 +102,18 @@ const main = async (err) => {
       }
 
       searchResults.innerHTML =
-        (searchData.restaurants ? searchData.restaurants : "") +
-        (searchData.restaurants && searchData.categories
-          ? "<div class='divider'></div>"
-          : "") +
-        (searchData.categories ? searchData.categories : "");
+        !searchData.restaurants &&
+        !searchData.categories &&
+        event.target.value != ""
+          ? `<div class='no-data'>
+      <h2>Hmmm...</h2>
+      <p>We couldn't find any matches for "${event.target.value}"</p>
+      </div>`
+          : (searchData.restaurants ? searchData.restaurants : "") +
+            (searchData.restaurants && searchData.categories
+              ? "<div class='divider'></div>"
+              : "") +
+            (searchData.categories ? searchData.categories : "");
     });
   }
 
