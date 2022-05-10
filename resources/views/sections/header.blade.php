@@ -1,4 +1,5 @@
 @include('sections.mobile-menu')
+@include('sections.mobile-search')
 <header class="header">
   <div class="header-left">
     <div class="brand">
