@@ -880,6 +880,16 @@ footer div a {
 
 /* Restaurants page */
 
+.restaurants .title {
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .restaurants .title {
+    display: none;
+  }
+}
+
 .tabs .menu {
   display: flex;
   list-style: none;
@@ -913,6 +923,18 @@ footer div a {
   overflow: initial;
 }
 
+.restaurants .container {
+  padding: 0 1rem;
+}
+
+.restaurants .container .restaurants-list .restaurant-card {
+  width: 12rem;
+}
+
+.restaurants .container .restaurants-list .restaurant-card img {
+  width: 12rem;
+}
+
 @media (min-width: 768px) {
   .restaurants .container .restaurants-list {
     display: grid;
@@ -920,6 +942,14 @@ footer div a {
     gap: 1rem;
     justify-items: center;
     overflow: initial;
+  }
+
+  .restaurants .container .restaurants-list .restaurant-card {
+    width: initial;
+  }
+
+  .restaurants .container .restaurants-list .restaurant-card img {
+    width: initial;
   }
 }
 
