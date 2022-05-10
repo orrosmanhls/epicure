@@ -12,9 +12,11 @@ const main = async (err) => {
   document
     .querySelector(".header .header-right .search img")
     .addEventListener("click", () => {
-      const search = document.querySelector(".mobile-search");
-      search.style.display = "flex";
-      document.body.style.overflow = "hidden";
+      if (window.screen.width <= 768) {
+        const search = document.querySelector(".mobile-search");
+        search.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
     });
 
   document
