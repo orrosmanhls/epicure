@@ -9,6 +9,22 @@ const main = async (err) => {
     console.error(err);
   }
 
+  document
+    .querySelector(".header .header-right .search img")
+    .addEventListener("click", () => {
+      const search = document.querySelector(".mobile-search");
+      search.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    });
+
+  document
+    .getElementById("mobile-search-close-btn")
+    .addEventListener("click", () => {
+      const menu = document.querySelector(".mobile-search");
+      menu.style.display = "none";
+      document.body.style.overflow = "initial";
+    });
+
   document.getElementById("mobile-menu-btn").addEventListener("click", () => {
     const menu = document.getElementById("mobile-menu");
     menu.style.display = "flex";
@@ -74,7 +90,7 @@ const main = async (err) => {
       } else {
         searchData.categories = null;
       }
-      console.log(searchData);
+
       searchResults.innerHTML =
         (searchData.restaurants ? searchData.restaurants : "") +
         (searchData.restaurants && searchData.categories
@@ -103,7 +119,7 @@ const main = async (err) => {
         results.categories.push(category.name);
       }
     }
-    console.log(results);
+
     return results;
   };
 };

@@ -1109,7 +1109,8 @@ footer div a {
   width: 100vw;
   background-color: white;
   justify-content: center;
-  align-items: flex-start;
+  align-items: baseline;
+  gap: 1rem;
 }
 
 .mobile-search .search {
@@ -1124,7 +1125,7 @@ footer div a {
 .mobile-search .search .search-input {
   border: 1.5px solid var(--brown-grey);
   border-radius: 4px;
-  width: 80vw;
+  width: 70vw;
   padding: 0.5rem 2rem;
   background-color: hsla(0, 0%, 0%, 0); /* transparent background */
   height: 1.4rem;
