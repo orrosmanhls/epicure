@@ -723,7 +723,7 @@ h6 {
 
 @media (max-width: 768px) {
   .about-us {
-    padding: 0 3rem;
+    padding: 0 1rem;
     text-align: center;
   }
 }
@@ -742,7 +742,7 @@ h6 {
     display: flex;
     flex-direction: column;
     margin: auto;
-    padding: 0 3rem;
+    padding: 0;
   }
 }
 
@@ -755,6 +755,19 @@ h6 {
   font-size: x-large;
   margin: 0.7rem 0;
   grid-area: 2 / 1 / 3 / 2;
+}
+
+@media (max-width: 768px) {
+  .about-us .container h1 {
+    font-size: medium;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .about-us .container .about-us-info {
+    font-size: medium;
+    margin: 0;
+  }
 }
 
 .about-us .container .about-us-brand {
@@ -772,9 +785,26 @@ h6 {
   height: 9rem;
 }
 
+@media (max-width: 768px) {
+  .about-us .container .about-us-brand img {
+    height: 7rem;
+  }
+
+  .about-us .container .about-us-brand h2 {
+    font-weight: 300;
+    font-size: large;
+  }
+}
+
 .about-us .about-us-buttons {
   display: flex;
   grid-area: 3 / 1 / 4 / 3;
+}
+
+@media (max-width: 768px) {
+  .about-us .about-us-buttons {
+    font-size: small;
+  }
 }
 
 .about-us .about-us-buttons .download-button:first-child {
