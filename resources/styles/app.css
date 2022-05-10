@@ -1072,3 +1072,31 @@ footer div a {
 .hero .hero-text .search .search-results .result-type {
   color: var(--brown-grey);
 }
+
+/* Mobile Nav section */
+
+.mobile-nav-section {
+  background-color: #fafafa;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav-section {
+    display: none;
+  }
+}
+
+.mobile-nav-section .pages .menu {
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.mobile-nav-section .pages .menu .menu-item {
+  padding: 0.75rem;
+  background-color: rgba(232, 196, 122, 0.8);
+  font-weight: 300;
+}
