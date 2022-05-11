@@ -100,6 +100,13 @@ const main = async (err) => {
     return results;
   };
 
+  const focusOnMobileSearch = () => {
+    const searchInput = document.querySelector(
+      ".mobile-search .search .search-input"
+    );
+    searchInput.focus();
+  };
+
   document
     .querySelector(".header .header-right .search img")
     .addEventListener("click", () => {
@@ -107,6 +114,7 @@ const main = async (err) => {
         const search = document.querySelector(".mobile-search");
         search.style.display = "flex";
         document.body.style.overflow = "hidden";
+        focusOnMobileSearch();
       }
     });
 
@@ -139,6 +147,7 @@ const main = async (err) => {
         const search = document.querySelector(".mobile-search");
         search.style.display = "flex";
         document.body.style.overflow = "hidden";
+        focusOnMobileSearch();
       }
     });
 };
