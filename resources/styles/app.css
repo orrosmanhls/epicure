@@ -340,7 +340,7 @@ h6 {
 
 @media (max-width: 768px) {
   .homepage-restaurants {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
   .homepage-restaurants h2 {
     font-size: medium;
@@ -388,9 +388,16 @@ h6 {
 
 @media (max-width: 768px) {
   .restaurant-card img {
-    height: 10rem;
+    /* height: 10rem;
+    width: 12.5rem;
+    object-fit: cover; */
+    height: 14rem;
     width: 12.5rem;
     object-fit: cover;
+  }
+
+  .restaurant-card .restaurant-card-content {
+    margin: 2rem 0;
   }
 }
 
