@@ -495,12 +495,12 @@ h6 {
 
 @media (max-width: 768px) {
   .dish-card-content {
-    width: 12.5rem;
+    width: 16rem;
   }
 
   .dish-card-content .dish-cover-image {
     height: 14rem;
-    width: 12.5rem;
+    width: 16rem;
     object-fit: cover;
   }
 }
@@ -552,10 +552,13 @@ h6 {
   overflow: hidden;
   text-align: center;
   margin: 0 1rem;
+  padding-bottom: 2.5rem;
 }
 .price > span {
   position: relative;
   display: inline-block;
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 .price > span:before,
 .price > span:after {
