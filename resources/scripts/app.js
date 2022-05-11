@@ -9,48 +9,6 @@ const main = async (err) => {
     console.error(err);
   }
 
-  document
-    .querySelector(".header .header-right .search img")
-    .addEventListener("click", () => {
-      if (window.screen.width <= 768) {
-        const search = document.querySelector(".mobile-search");
-        search.style.display = "flex";
-        document.body.style.overflow = "hidden";
-      }
-    });
-
-  document
-    .getElementById("mobile-search-close-btn")
-    .addEventListener("click", () => {
-      const menu = document.querySelector(".mobile-search");
-      menu.style.display = "none";
-      document.body.style.overflow = "initial";
-    });
-
-  document.getElementById("mobile-menu-btn").addEventListener("click", () => {
-    const menu = document.getElementById("mobile-menu");
-    menu.style.display = "flex";
-    document.body.style.overflow = "hidden";
-  });
-
-  document
-    .getElementById("mobile-menu-close-btn")
-    .addEventListener("click", () => {
-      const menu = document.getElementById("mobile-menu");
-      menu.style.display = "none";
-      document.body.style.overflow = "initial";
-    });
-
-  document
-    .querySelector(".hero .hero-text .search .search-input")
-    .addEventListener("focus", () => {
-      if (window.screen.width <= 768) {
-        const search = document.querySelector(".mobile-search");
-        search.style.display = "flex";
-        document.body.style.overflow = "hidden";
-      }
-    });
-
   const restaurants = JSON.parse(
     document.getElementsByClassName("restaurants-value")[0].value
   );
@@ -141,6 +99,48 @@ const main = async (err) => {
 
     return results;
   };
+
+  document
+    .querySelector(".header .header-right .search img")
+    .addEventListener("click", () => {
+      if (window.screen.width <= 768) {
+        const search = document.querySelector(".mobile-search");
+        search.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+    });
+
+  document
+    .getElementById("mobile-search-close-btn")
+    .addEventListener("click", () => {
+      const menu = document.querySelector(".mobile-search");
+      menu.style.display = "none";
+      document.body.style.overflow = "initial";
+    });
+
+  document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+    const menu = document.getElementById("mobile-menu");
+    menu.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  });
+
+  document
+    .getElementById("mobile-menu-close-btn")
+    .addEventListener("click", () => {
+      const menu = document.getElementById("mobile-menu");
+      menu.style.display = "none";
+      document.body.style.overflow = "initial";
+    });
+
+  document
+    .querySelector(".hero .hero-text .search .search-input")
+    .addEventListener("focus", () => {
+      if (window.screen.width <= 768) {
+        const search = document.querySelector(".mobile-search");
+        search.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+    });
 };
 
 /**
