@@ -1126,10 +1126,10 @@ footer div a {
   border: 1.5px solid var(--brown-grey);
   border-radius: 4px;
   width: 70vw;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 0 0.5rem 2rem;
   background-color: hsla(0, 0%, 0%, 0); /* transparent background */
   height: 1.4rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: lighter;
   text-indent: 1rem;
 }
@@ -1155,6 +1155,12 @@ footer div a {
 .mobile-search .search .search-results .result-type {
   color: var(--brown-grey);
 }
+
 .mobile-search .search .search-results div {
   font-size: 1.25rem;
+}
+
+.mobile-search #mobile-search-close-btn img {
+  position: relative;
+  top: 0.2rem;
 }
