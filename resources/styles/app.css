@@ -1006,12 +1006,18 @@ footer div a {
 
 #mobile-menu #mobile-menu-close-btn {
   position: absolute;
-  left: 1rem;
-  top: 1rem;
+  width: 100vw;
+  padding-left: 7rem;
+  top: 1.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+#mobile-menu #mobile-menu-close-btn img {
+  margin-bottom: 0.5rem;
 }
 
 #mobile-menu .content {
-  margin-top: -10rem;
+  margin-top: -19rem;
   font-weight: 300;
 }
 
@@ -1021,6 +1027,7 @@ footer div a {
   text-align: center;
   padding: 0;
   margin: 0;
+  gap: 1rem;
 }
 
 #mobile-menu .content .pages .menu .menu-item {
@@ -1030,13 +1037,14 @@ footer div a {
 #mobile-menu .content .divider {
   width: 14rem;
   border-top: 0.8px solid var(--brown-grey);
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 #mobile-menu .content .links {
   display: flex;
   flex-direction: column;
   text-align: center;
+  gap: 1rem;
 }
 
 #mobile-menu .content .links a {
