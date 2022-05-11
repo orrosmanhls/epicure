@@ -9,6 +9,24 @@ const main = async (err) => {
     console.error(err);
   }
 
+  document
+    .querySelector(".header .header-right .search img")
+    .addEventListener("click", () => {
+      if (window.screen.width <= 768) {
+        const search = document.querySelector(".mobile-search");
+        search.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+    });
+
+  document
+    .getElementById("mobile-search-close-btn")
+    .addEventListener("click", () => {
+      const menu = document.querySelector(".mobile-search");
+      menu.style.display = "none";
+      document.body.style.overflow = "initial";
+    });
+
   document.getElementById("mobile-menu-btn").addEventListener("click", () => {
     const menu = document.getElementById("mobile-menu");
     menu.style.display = "flex";
@@ -21,6 +39,16 @@ const main = async (err) => {
       const menu = document.getElementById("mobile-menu");
       menu.style.display = "none";
       document.body.style.overflow = "initial";
+    });
+
+  document
+    .querySelector(".hero .hero-text .search .search-input")
+    .addEventListener("focus", () => {
+      if (window.screen.width <= 768) {
+        const search = document.querySelector(".mobile-search");
+        search.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
     });
 
   const restaurants = JSON.parse(
@@ -74,13 +102,20 @@ const main = async (err) => {
       } else {
         searchData.categories = null;
       }
-      console.log(searchData);
+
       searchResults.innerHTML =
-        (searchData.restaurants ? searchData.restaurants : "") +
-        (searchData.restaurants && searchData.categories
-          ? "<div class='divider'></div>"
-          : "") +
-        (searchData.categories ? searchData.categories : "");
+        !searchData.restaurants &&
+        !searchData.categories &&
+        event.target.value != ""
+          ? `<div class='no-data'>
+      <h2>Hmmm...</h2>
+      <p>We couldn't find any matches for "${event.target.value}"</p>
+      </div>`
+          : (searchData.restaurants ? searchData.restaurants : "") +
+            (searchData.restaurants && searchData.categories
+              ? "<div class='divider'></div>"
+              : "") +
+            (searchData.categories ? searchData.categories : "");
     });
   }
 
@@ -103,7 +138,7 @@ const main = async (err) => {
         results.categories.push(category.name);
       }
     }
-    console.log(results);
+
     return results;
   };
 };
