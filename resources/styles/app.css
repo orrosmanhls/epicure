@@ -973,6 +973,24 @@ footer div a {
   width: 12rem;
 }
 
+#restaurants-page
+  .restaurants
+  .container
+  .restaurants-list
+  .restaurant-card
+  img {
+  height: 9rem;
+}
+
+#restaurants-page
+  .restaurants
+  .container
+  .restaurants-list
+  .restaurant-card
+  .restaurant-card-content {
+  margin: 0;
+}
+
 @media (min-width: 768px) {
   .restaurants .container .restaurants-list {
     display: grid;
