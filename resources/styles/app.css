@@ -1248,3 +1248,67 @@ footer div a {
 #coming-soon p {
   font-size: 1.2rem;
 }
+
+/* Mobile Search */
+.mobile-search {
+  display: none;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.mobile-search .search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.mobile-search .search .search-input {
+  border: 1.5px solid var(--brown-grey);
+  border-radius: 4px;
+  width: 70vw;
+  padding: 0.5rem 0 0.5rem 2rem;
+  background-color: hsla(0, 0%, 0%, 0); /* transparent background */
+  height: 1.4rem;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-indent: 1rem;
+}
+
+.mobile-search .search img {
+  width: min-content;
+  height: 1.5rem;
+  left: 1rem;
+  top: 0.6rem;
+  position: absolute;
+}
+
+.mobile-search .search .search-results {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+  gap: 0.5rem;
+  position: absolute;
+  top: 3rem;
+  width: 90%;
+}
+
+.mobile-search .search .search-results .result-type {
+  color: var(--brown-grey);
+}
+
+.mobile-search .search .search-results div {
+  font-size: 1.25rem;
+}
+
+.mobile-search #mobile-search-close-btn img {
+  position: relative;
+  top: 0.2rem;
+}
