@@ -1016,6 +1016,10 @@ footer div a {
   height: 9rem;
 }
 
+#restaurants-page {
+  margin-top: 6rem;
+}
+
 #restaurants-page
   .restaurants
   .container
