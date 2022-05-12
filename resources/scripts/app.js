@@ -9,6 +9,26 @@ const main = async (err) => {
     console.error(err);
   }
 
+  const isOnScreen = (element) => {
+    const rect = element.getBoundingClientRect();
+    const viewHeight = Math.max(
+      document.documentElement.clientHeight,
+      window.innerHeight
+    );
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+  };
+
+  const heroSearch = document.querySelector(".hero .hero-text .search");
+  const headerSearch = document.querySelector(".header .header-right .search");
+  document.addEventListener("scroll", (e) => {
+    console.log(e);
+    if (isOnScreen(heroSearch)) {
+      headerSearch.style.display = "none";
+    } else {
+      headerSearch.style.display = "grid";
+    }
+  });
+
   document.getElementById("mobile-menu-btn").addEventListener("click", () => {
     const menu = document.getElementById("mobile-menu");
     menu.style.display = "flex";
@@ -175,6 +195,7 @@ const main = async (err) => {
         const search = document.querySelector(".mobile-search");
         search.style.display = "flex";
         document.body.style.overflow = "hidden";
+        document.querySelector(".header").style.display = "none";
         focusOnMobileSearch();
       }
     });
