@@ -745,12 +745,18 @@ h6 {
 
 .chef-of-the-week .restaurant-card img {
   height: 13.5rem;
+  width: 14rem;
 }
 
 .chef-of-the-week .restaurant-card h1 {
   padding-bottom: 1rem;
   font-weight: 300;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
+}
+
+.chef-of-the-week .restaurant-card .restaurant-card-content {
+  padding-bottom: 2.25rem;
+  margin-top: -0.5rem;
 }
 
 @media (max-width: 768px) {
