@@ -1069,7 +1069,7 @@ footer div a {
   display: none;
   position: relative;
   height: 100vh;
-  width: 100vw;
+  overflow: hidden;
   background-color: white;
   flex-direction: column;
   justify-content: center;
@@ -1089,7 +1089,7 @@ footer div a {
 }
 
 #mobile-menu .content {
-  margin-top: -19rem;
+  margin-top: -17rem;
   font-weight: 300;
 }
 

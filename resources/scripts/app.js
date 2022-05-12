@@ -13,6 +13,7 @@ const main = async (err) => {
     const menu = document.getElementById("mobile-menu");
     menu.style.display = "flex";
     document.body.style.overflow = "hidden";
+    document.querySelector(".header").style.display = "none";
   });
 
   document
@@ -21,6 +22,7 @@ const main = async (err) => {
       const menu = document.getElementById("mobile-menu");
       menu.style.display = "none";
       document.body.style.overflow = "initial";
+      document.querySelector(".header").style.display = "flex";
     });
 
   const restaurants = JSON.parse(
