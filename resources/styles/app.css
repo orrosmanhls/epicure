@@ -1017,6 +1017,18 @@ footer div a {
   height: 9rem;
 }
 
+@media (min-width: 768px) {
+  #restaurants-page
+    .restaurants
+    .container
+    .restaurants-list
+    .restaurant-card
+    img {
+    height: 10rem;
+    width: 16.5rem;
+  }
+}
+
 #restaurants-page {
   margin-top: 6rem;
 }
