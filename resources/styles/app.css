@@ -1126,6 +1126,10 @@ footer div a {
   padding-bottom: 1rem;
 }
 
+.header .header-right .search .search-results .divider {
+  margin-top: 0.25rem;
+}
+
 .header .header-right .search .search-results .result-type {
   color: var(--brown-grey);
 }
@@ -1145,7 +1149,7 @@ footer div a {
 }
 
 .hero .hero-text .search .search-results div {
-  padding: 0 5rem;
+  padding: 0 4rem;
 }
 
 .hero .hero-text .search .search-results div:first-child {
