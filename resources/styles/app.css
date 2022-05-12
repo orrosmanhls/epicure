@@ -190,7 +190,8 @@ h6 {
   }
 }
 
-.header .menu .current_page_item {
+.header .menu .current_page_item,
+.header .menu .current-page-ancestor {
   border-bottom: 2px solid #fcb900;
   padding: 0.4rem 0;
 }
