@@ -75,17 +75,21 @@ h6 {
   justify-content: space-around;
   align-items: center;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
 }
 
 @media (max-width: 768px) {
   .header {
     padding: 0.7rem;
-    position: relative;
+    /* position: relative; */
   }
 
   .header-right {
     position: absolute;
-    right: 1rem;
+    right: 2rem;
   }
 }
 
@@ -269,6 +273,12 @@ h6 {
 /* Hero */
 .hero {
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 3.5rem;
+  }
 }
 
 .hero img {
