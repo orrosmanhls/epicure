@@ -25,8 +25,6 @@ const main = async (err) => {
       document.querySelector(".header").style.display = "flex";
     });
 
-
- 
   const restaurants = JSON.parse(
     document.getElementsByClassName("restaurants-value")[0].value
   );
@@ -142,6 +140,7 @@ const main = async (err) => {
         const search = document.querySelector(".mobile-search");
         search.style.display = "flex";
         document.body.style.overflow = "hidden";
+        document.querySelector(".header").style.display = "none";
         focusOnMobileSearch();
       }
     });
@@ -152,6 +151,7 @@ const main = async (err) => {
       const menu = document.querySelector(".mobile-search");
       menu.style.display = "none";
       document.body.style.overflow = "initial";
+      document.querySelector(".header").style.display = "flex";
     });
 
   document.getElementById("mobile-menu-btn").addEventListener("click", () => {
