@@ -9,6 +9,24 @@ const main = async (err) => {
     console.error(err);
   }
 
+  document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+    const menu = document.getElementById("mobile-menu");
+    menu.style.display = "flex";
+    document.body.style.overflow = "hidden";
+    document.querySelector(".header").style.display = "none";
+  });
+
+  document
+    .getElementById("mobile-menu-close-btn")
+    .addEventListener("click", () => {
+      const menu = document.getElementById("mobile-menu");
+      menu.style.display = "none";
+      document.body.style.overflow = "initial";
+      document.querySelector(".header").style.display = "flex";
+    });
+
+
+ 
   const restaurants = JSON.parse(
     document.getElementsByClassName("restaurants-value")[0].value
   );
@@ -27,8 +45,18 @@ const main = async (err) => {
 
       const searchResults = event.target.nextElementSibling;
 
-      input.addEventListener("blur", () => {
-        searchResults.style.display = "none";
+      document.addEventListener("mousedown", (e) => {
+        console.log(
+          e.target != searchResults,
+          Array.from(searchResults.children).some((child) => child == e.target)
+        );
+
+        if (
+          e.target != searchResults &&
+          !Array.from(searchResults.children).some((child) => child == e.target)
+        ) {
+          searchResults.style.display = "none";
+        }
       });
 
       input.addEventListener("focus", () => {
@@ -41,7 +69,7 @@ const main = async (err) => {
         let restaurants = "";
 
         for (const restaurant of results.restaurants) {
-          restaurants += `<div>${restaurant}</div>`;
+          restaurants += `<a href='/coming-soon'>${restaurant}</a>`;
         }
 
         searchData.restaurants = `<div class="result-type">Restaurants :</div>${restaurants}`;
@@ -53,7 +81,7 @@ const main = async (err) => {
         let categories = "";
 
         for (const category of results.categories) {
-          categories += `<div>${category}</div>`;
+          categories += `<a href='/coming-soon'>${category}</a>`;
         }
 
         searchData.categories = `<div class="result-type">Cuisine :</div>${categories}`;
