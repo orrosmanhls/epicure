@@ -1137,16 +1137,22 @@ footer div a {
   z-index: 1;
 }
 
+.header .header-right .search .search-results a,
 .header .header-right .search .search-results div {
-  padding: 0 2rem;
+  margin: 0 2rem;
 }
 
-.header .header-right .search .search-results div:first-child {
+.search-results :not(.result-type):hover {
+  background-color: var(--light-tan);
+}
+
+.search-results a {
+  text-decoration: none;
+  color: #000;
+}
+
+.search .search-results .result-type:first-child {
   padding-top: 1rem;
-}
-
-.header .header-right .search .search-results div:last-child {
-  padding-bottom: 1rem;
 }
 
 .header .header-right .search .search-results .divider {
@@ -1171,16 +1177,17 @@ footer div a {
   gap: 0.8rem;
 }
 
+.hero .hero-text .search .search-results a,
 .hero .hero-text .search .search-results div {
-  padding: 0 4rem;
+  margin: 0 4rem;
 }
 
-.hero .hero-text .search .search-results div:first-child {
+.hero .hero-text .search .search-results a:first-child {
   padding-top: 1rem;
 }
 
-.hero .hero-text .search .search-results div:last-child {
-  padding-bottom: 1rem;
+.search .search-results a:last-child {
+  margin-bottom: 1rem !important;
 }
 
 .hero .hero-text .search .search-results .result-type {
@@ -1214,4 +1221,24 @@ footer div a {
   padding: 0.75rem;
   background-color: rgba(232, 196, 122, 0.8);
   font-weight: 300;
+}
+
+/* Coming Soon page */
+
+#coming-soon {
+  margin-top: 5rem;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#coming-soon h1 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+#coming-soon p {
+  font-size: 1.2rem;
 }
