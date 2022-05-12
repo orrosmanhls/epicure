@@ -1221,9 +1221,12 @@ footer div a {
 }
 
 .mobile-nav-section .pages .menu .menu-item {
-  padding: 0.75rem;
+  padding: 1rem;
   background-color: rgba(232, 196, 122, 0.8);
   font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* Coming Soon page */
