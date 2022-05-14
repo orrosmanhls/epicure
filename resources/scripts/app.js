@@ -21,7 +21,6 @@ const main = async (err) => {
   const heroSearch = document.querySelector(".hero .hero-text .search");
   const headerSearch = document.querySelector(".header .header-right .search");
   document.addEventListener("scroll", (e) => {
-    console.log(e);
     if (isOnScreen(heroSearch)) {
       headerSearch.style.display = "none";
     } else {
@@ -63,22 +62,37 @@ const main = async (err) => {
 
       const searchResults = event.target.nextElementSibling;
 
-      document.addEventListener("mousedown", (e) => {
-        console.log(
-          e.target != searchResults,
-          Array.from(searchResults.children).some((child) => child == e.target)
-        );
+      const clearButton = event.target.parentNode.querySelector(".clear-btn");
+      clearButton.style.display = "block";
 
+      clearButton.addEventListener("click", () => {
+        event.target.value = "";
+        clearButton.style.display = "none";
+      });
+
+      if (event.target.value == "") {
+        clearButton.style.display = "none";
+      } else {
+        clearButton.style.display = "block";
+      }
+
+      document.addEventListener("mousedown", (e) => {
         if (
           e.target != searchResults &&
+          e.target != input &&
           !Array.from(searchResults.children).some((child) => child == e.target)
         ) {
           searchResults.style.display = "none";
+        }
+
+        if (e.target != clearButton && e.target != input) {
+          clearButton.style.display = "none";
         }
       });
 
       input.addEventListener("focus", () => {
         searchResults.style.display = "flex";
+        clearButton.style.display = "block";
       });
 
       const searchData = {};

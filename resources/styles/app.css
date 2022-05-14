@@ -249,6 +249,13 @@ h6 {
   margin: 0 !important;
 }
 
+.header .search img.clear-btn {
+  display: none;
+  height: 1.1rem;
+  left: auto;
+  right: 3rem;
+}
+
 @media (max-width: 768px) {
   .header .search {
     right: -1;
@@ -370,6 +377,13 @@ h6 {
   height: 1.5rem;
   left: 1rem;
   position: absolute;
+}
+
+.hero .search img.clear-btn {
+  display: none;
+  left: initial;
+  right: 0.65rem;
+  height: 1.1rem;
 }
 
 /* Restaurants Section */
@@ -1160,7 +1174,7 @@ footer div a {
   margin: 0 2rem;
 }
 
-.search-results :not(.result-type, .divider):hover {
+.search-results :not(.result-type, .divider, .no-data, .no-data > *):hover {
   background-color: var(--light-tan);
 }
 
@@ -1325,4 +1339,12 @@ footer div a {
 .mobile-search #mobile-search-close-btn img {
   position: relative;
   top: 0.2rem;
+}
+
+.mobile-search .search img.clear-btn {
+  display: none;
+  height: 1.1rem;
+  left: auto;
+  right: 1rem;
+  top: 0.75rem;
 }
