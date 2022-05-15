@@ -1,4 +1,4 @@
-<h2>{{ $restaurant }}</h2>
+<h2>{{ ucfirst($restaurant) }}</h2>
 
 <div class="dish-card-content">
     <img class="dish-cover-image" src="{{ $source }}" alt="">
