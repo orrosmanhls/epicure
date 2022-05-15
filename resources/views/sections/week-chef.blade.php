@@ -1,6 +1,6 @@
 <section class="chef-of-the-week">
 
-    <h1 class="text-center">CHEF OF THE WEEK:</h1>
+    <h1 class="text-center">CHEF OF THE WEEK :</h1>
 
     @php $chef =epicure_random_chef() @endphp
 
