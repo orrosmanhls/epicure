@@ -60,6 +60,7 @@ const main = async (err) => {
         categories
       );
       const searchResults = event.target.nextElementSibling;
+      searchResults.style.display = "flex";
 
       const clearButton = event.target.parentNode.querySelector(".clear-btn");
       clearButton.style.display = "block";
@@ -71,6 +72,7 @@ const main = async (err) => {
 
       if (event.target.value == "") {
         clearButton.style.display = "none";
+        searchResults.style.display = "none";
       } else {
         clearButton.style.display = "block";
       }
@@ -90,7 +92,7 @@ const main = async (err) => {
       });
 
       input.addEventListener("focus", () => {
-        searchResults.style.display = "flex";
+        // searchResults.style.display = "flex";
         clearButton.style.display = "block";
       });
 
