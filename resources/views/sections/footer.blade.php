@@ -1,7 +1,7 @@
 <footer>
-  <div>
-    <a href="">Contact Us</a>
-    <a href="">Terms of Use</a>
-    <a href="">Privacy Policy</a>
-  </div>
+    <div>
+        <a href="/coming-soon">Contact Us</a>
+        <a href="/coming-soon">Terms of Use</a>
+        <a href="/coming-soon">Privacy Policy</a>
+    </div>
 </footer>
