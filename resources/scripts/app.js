@@ -47,8 +47,8 @@ const main = async (err) => {
   const restaurants = JSON.parse(
     document.getElementsByClassName("restaurants-value")[0].value
   );
-  const categories = JSON.parse(
-    document.getElementsByClassName("categories-value")[0].value
+  const categories = Object.values(
+    JSON.parse(document.getElementsByClassName("categories-value")[0].value)
   );
 
   const inputs = document.getElementsByClassName("search-input");
@@ -59,7 +59,6 @@ const main = async (err) => {
         restaurants,
         categories
       );
-
       const searchResults = event.target.nextElementSibling;
 
       const clearButton = event.target.parentNode.querySelector(".clear-btn");
@@ -145,6 +144,7 @@ const main = async (err) => {
     if (input === "") {
       return results;
     }
+
     for (const restaurant of restaurants) {
       if (restaurant.name.toLowerCase().includes(input.toLowerCase())) {
         results.restaurants.push(restaurant.name);
