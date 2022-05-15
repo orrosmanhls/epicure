@@ -187,10 +187,11 @@ const main = async (err) => {
       document.body.style.overflow = "initial";
       document.querySelector(".header").style.display = "flex";
     });
-
+  let currentPos = window.pageYOffset;
   document.getElementById("mobile-menu-btn").addEventListener("click", () => {
     const menu = document.getElementById("mobile-menu");
     menu.style.display = "flex";
+    window.scrollTo(0, 0);
     document.body.style.overflow = "hidden";
   });
 
@@ -200,6 +201,7 @@ const main = async (err) => {
       const menu = document.getElementById("mobile-menu");
       menu.style.display = "none";
       document.body.style.overflow = "initial";
+      window.scrollTo(0, currentPos);
     });
 
   document

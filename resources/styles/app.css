@@ -686,6 +686,10 @@ h6 {
   margin: 4rem 0;
 }
 
+.chef-of-the-week .container .restaurants-list .restaurant-card {
+  margin: 0.4rem;
+}
+
 @media (max-width: 768px) {
   .chef-of-the-week {
     display: block;
