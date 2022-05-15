@@ -688,6 +688,7 @@ h6 {
 
 .chef-of-the-week .container .restaurants-list .restaurant-card {
   margin: 0.4rem;
+  padding-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -699,6 +700,7 @@ h6 {
 .chef-of-the-week h1 {
   grid-area: 1 / 2 / 2 / 3;
   font-weight: 200;
+  font-size: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -746,9 +748,10 @@ h6 {
 }
 
 .chef-info p {
-  font-size: larger;
+  font-size: 1.5rem;
+  font-weight: 200;
   text-align: justify;
-  margin: 0 2rem;
+  margin: 0 4rem;
 }
 
 @media (max-width: 768px) {
@@ -764,6 +767,11 @@ h6 {
 .chef-of-the-week .container {
   grid-area: 3 / 2 / 4 / 3;
   margin-top: 2rem;
+}
+
+.chef-of-the-week .container h2 {
+  font-size: 1.75rem;
+  font-weight: 200;
 }
 
 @media (max-width: 768px) {
@@ -786,8 +794,8 @@ h6 {
 }
 
 .chef-of-the-week .restaurant-card img {
-  height: 13.5rem;
-  width: 14rem;
+  height: 13rem;
+  width: 14.4rem;
 }
 
 .chef-of-the-week .restaurant-card h1 {
