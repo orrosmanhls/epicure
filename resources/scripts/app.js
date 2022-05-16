@@ -9,6 +9,10 @@ const main = async (err) => {
     console.error(err);
   }
 
+  const isFrontPage = !Boolean(
+    new URL(window.location.href).pathname.split("/").filter(Boolean).length
+  );
+
   const isOnScreen = (element) => {
     const rect = element.getBoundingClientRect();
     const viewHeight = Math.max(
@@ -20,6 +24,11 @@ const main = async (err) => {
 
   const heroSearch = document.querySelector(".hero .hero-text .search");
   const headerSearch = document.querySelector(".header .header-right .search");
+
+  if (!isFrontPage) {
+    headerSearch.style.display = "flex";
+  }
+
   document.addEventListener("scroll", (e) => {
     if (isOnScreen(heroSearch)) {
       headerSearch.style.display = "none";
