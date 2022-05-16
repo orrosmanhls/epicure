@@ -1323,7 +1323,7 @@ footer div a {
   padding: 0.5rem 0 0.5rem 2rem;
   background-color: hsla(0, 0%, 0%, 0); /* transparent background */
   height: 1.4rem;
-  font-size: 1rem;
+  font-size: 0.89rem;
   font-weight: lighter;
   text-indent: 1rem;
 }
@@ -1360,7 +1360,6 @@ footer div a {
 }
 
 .mobile-search .search img.clear-btn {
-  display: none;
   height: 1.1rem;
   left: auto;
   right: 1rem;
