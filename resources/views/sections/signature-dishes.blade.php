@@ -9,7 +9,7 @@
         @foreach ($dishes as $dish)
             <li class="dish-card text-center">
 
-                <x-dish-card restaurant="{{ @$dish->restaurant[0]->post_name }}" source="{{ $dish->image_src }}"
+                <x-dish-card restaurant="{{ @$dish->restaurant[0]->post_title }}" source="{{ $dish->image_src }}"
                     width="{{ $dish->image_width }}" name="{{ $dish->name }}"
                     ingredients="{{ $dish->ingredients }}" price="{{ $dish->price }}" :types="$dish->dish_types" />
 

@@ -566,7 +566,7 @@ h6 {
 
 .dish-card-content p {
   grid-area: 3 / 1 / 4 / 2;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .dish-card-content .types {
@@ -596,7 +596,7 @@ h6 {
 
 @media (max-width: 768px) {
   .dish-card p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 

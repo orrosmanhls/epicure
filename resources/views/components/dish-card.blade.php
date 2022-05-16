@@ -4,7 +4,7 @@
     <img class="dish-cover-image" src="{{ $source }}" alt="">
 
     <h1>{{ $name }}</h1>
-    <p>{{ $ingredients }}</p>
+    <p>{{ format_ingredients($ingredients) }}</p>
 
     <div class="types">
         @foreach ($types as $type)
