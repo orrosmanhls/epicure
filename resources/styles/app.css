@@ -566,7 +566,7 @@ h6 {
 
 .dish-card-content p {
   grid-area: 3 / 1 / 4 / 2;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .dish-card-content .types {
@@ -596,7 +596,7 @@ h6 {
 
 @media (max-width: 768px) {
   .dish-card p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -805,8 +805,7 @@ h6 {
 }
 
 .chef-of-the-week .restaurant-card .restaurant-card-content {
-  padding-bottom: 2.25rem;
-  margin-top: -0.5rem;
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -974,13 +973,6 @@ footer {
   position: static;
   bottom: 0;
   width: 100%;
-}
-
-footer div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 26rem;
 }
 
 footer div a {

@@ -207,3 +207,16 @@ function is_new($date_added)
         return false;
     }
 }
+
+function format_ingredients($ingredients)
+{
+    $ingredients_list = explode(', ', $ingredients);
+    $formatted_ingredients_list = array();
+
+    foreach ($ingredients_list as $ingredient) {
+        $ingredient = ucfirst(strtolower($ingredient));
+        array_push($formatted_ingredients_list, $ingredient);
+    }
+
+    return implode(', ', $formatted_ingredients_list);
+}
