@@ -737,7 +737,6 @@ h6 {
 .chef-info {
   grid-area: 2 / 2 / 3 / 3;
   display: flex;
-  justify-content: space-between;
 }
 
 @media (max-width: 768px) {
