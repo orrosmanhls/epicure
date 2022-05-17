@@ -781,6 +781,8 @@ h6 {
     grid-area: 2 / 1 / 3 / 2;
     margin: 1.5rem auto;
     width: 22rem;
+    font-size: initial;
+    line-height: initial;
   }
 }
 
