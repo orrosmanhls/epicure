@@ -106,6 +106,11 @@ function epicure_restaurants_list($number_of_restaurants = -1)
     endwhile;
     wp_reset_postdata();
 
+    usort($restaurants, function ($restaurant_1, $restaurant_2) {
+        // <=> : returns 0 if both operands are equal, 1 if the left is greater, and -1 if the right is greater
+        return $restaurant_1->name <=> $restaurant_2->name;
+    });
+
     return $restaurants;
     ?>
 <?php
