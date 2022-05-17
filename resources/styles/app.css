@@ -459,12 +459,20 @@ h6 {
   font-size: 1.75rem;
   margin: 0.5rem 0;
   margin-top: 1rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .restaurant-card p {
   font-size: 1.25rem;
   margin: 0 0 1rem 0;
+}
+
+.homepage-restaurants .restaurant-card h1 {
+  margin-top: 1.4rem;
+}
+
+.homepage-restaurants .restaurant-card p {
+  margin-bottom: 1.5rem;
 }
 
 .all-restaurants {
