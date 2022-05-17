@@ -1048,6 +1048,9 @@ footer div a {
 .restaurants .container .restaurants-list .restaurant-card img {
   width: 12rem;
 }
+#restaurants-page .restaurants .container .restaurants-list .restaurant-card p {
+  font-size: 1.15rem;
+}
 
 #restaurants-page
   .restaurants
