@@ -760,6 +760,7 @@ h6 {
   font-weight: 200;
   text-align: justify;
   margin: 0 4rem;
+  max-width: 33rem;
 }
 
 @media (max-width: 768px) {
